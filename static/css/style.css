@@ -1,0 +1,78 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Fondos específicos por página */
+.fondo-inicio {
+    background-image: url('/static/images/ia.jpg');
+}
+
+.fondo-menu {
+    background-image: url('/static/images/cafecompost.jpg');
+}
+
+.fondo-chatbot {
+    background-image: url('/static/images/menu2.png');
+}
+
+h1, h2, p {
+    color: white;
+    text-shadow: 1px 1px 3px #000;
+}
+
+button {
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+input {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Chatbot */
+#chatbox p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+#chatbox strong {
+    color: #ffee58;}
+
+    style>
+        /* Estilo para centrar y separar botones con imágenes */
+        .button-container {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+        .button-container img {
+            display: block;
+            margin: 0 auto 10px auto;
+            width: 100px; /* Ajusta el tamaño de la imagen */
+            height: auto;
+            border-radius: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #eee;
+        }
+        button:hover {
+            background-color: #ccc;
+        }
+

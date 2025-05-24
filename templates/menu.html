@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Principal</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body style="background-image: url('/static/images/cafecompost.jpg'); background-size: cover; color: white; text-align: center; padding-top: 100px;">
+    <h1>Bienvenid@, {{ nombre }}</h1>
+    
+    <p>Selecciona una opción:</p>
+    
+    <!-- Botones para info -->
+    <button onclick="window.location.href='/info/cafe'">Información sobre Café</button>
+    <button onclick="window.location.href='/info/compostaje'">Información sobre Compostaje</button>
+
+
+    <div style="margin-top: 30px;">
+        <a href="/chatbot">
+            <button style="
+                padding: 12px 24px;
+                font-size: 18px;
+                background-color: #795548;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+            ">Ir al Chatbot</button>
+
+        </a>
+    </div>
+<body class="/static/images/menu2.png">
+</html>

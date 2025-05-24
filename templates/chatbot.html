@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot Compost Café</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body style="background-image: url('/static/images/el-cafe-adulto-cosechando.jpg'); background-size: cover; color: white; text-align: center; padding-top: 100px;">
+
+    <h1>Cultivo de Café y Compostaje</h1>
+
+    <div id="chatbox" style="
+        width: 80%;
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 12px;
+        text-align: left;
+        overflow-y: auto;
+        height: 300px;
+    ">
+        <!-- Aquí agregaremos los mensajes -->
+    </div>
+
+    <div style="margin-top: 20px;">
+        <input type="text" id="pregunta" placeholder="Escribe tu pregunta..." style="
+            padding: 10px;
+            width: 60%;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+        ">
+        <button onclick="enviarPregunta()" style="
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        ">Enviar</button>
+    </div>
+
+    <script>
+        async function enviarPregunta() {
+            const pregunta = document.getElementById('pregunta').value;
+            const chatbox = document.getElementById('chatbox');
+
+            if (!pregunta.trim()) return;
+
+            chatbox.innerHTML += `<p><strong>Tú:</strong> ${pregunta}</p>`;
+
+            const respuesta = await fetch('/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ pregunta: pregunta })
+            });
+
+            const data = await respuesta.json();
+
+            chatbox.innerHTML += `<p><strong>Asistente:</strong> ${data.respuesta}</p>`;
+            document.getElementById('pregunta').value = '';
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+    </script>
+<body class="/static/images/menu2.png">
+</html>
