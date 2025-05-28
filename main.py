@@ -36,7 +36,7 @@ async def chat_endpoint(request: Request):
     if "compost" in pregunta:
         respuesta = "El compost ideal para café incluye cáscara, pulpa y estiércol bien fermentado."
     else:
-        respuesta = "Lo siento, ¿puedes reformular tu pregunta sobre compostaje en café?"
+        respuesta = "Lo siento, ¿Puedes reformular tu pregunta sobre compostaje y cultivo de café?"
 
     return JSONResponse(content={"respuesta": respuesta})
 
