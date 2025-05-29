@@ -1,0 +1,126 @@
+{
+    "intents": [
+    {
+        "tag": "introduccion_compostaje",
+        "patterns": [
+            "¿Qué es el compostaje?",
+            "¿Para qué sirve el compost?",
+            "Definición de compostaje orgánico"
+        ],
+        "responses": [
+            "El compostaje es un proceso biológico de descomposición controlada de materiales orgánicos. Se transforma en abono natural rico en nutrientes, ideal para mejorar suelos agrícolas y cafetales."
+        ],
+        "context_set": "general"
+    },
+    {
+        "tag": "beneficios_para_el_cafe",
+        "patterns": [
+            "¿El compost ayuda a mejorar la producción de café?",
+            "Beneficios del compost en cafetales",
+            "¿Por qué aplicar compost al café?"
+        ],
+        "responses": [
+            "El compost en cafetales mejora la estructura del suelo, favorece la retención de agua, reduce enfermedades y aumenta el rendimiento del grano. También mejora la salud de las raíces y la microbiota del suelo."
+        ]
+    },
+    {
+        "tag": "condiciones_para_compostar",
+        "patterns": [
+            "¿Qué condiciones necesita el compost para formarse?",
+            "¿Cuánta humedad debe tener el compost?",
+            "¿Temperatura ideal para compostaje?"
+        ],
+        "responses": [
+            "El compost debe tener una humedad del 50-60% y una temperatura entre 40 y 65 °C. Es necesario voltearlo regularmente para mantener el oxígeno y asegurar una descomposición uniforme."
+        ]
+    },
+    {
+        "tag": "errores_comunes",
+        "patterns": [
+            "¿Por qué mi compost no se descompone?",
+            "Mi compost huele mal",
+            "Errores comunes al hacer compost"
+        ],
+        "responses": [
+            "Evita materiales no biodegradables, exceso de agua o falta de aireación. Un mal olor suele indicar fermentación anaerobia. Soluciónalo agregando material seco (hojas, aserrín) y aireando."
+        ]
+    },
+    {
+        "tag": "recomendaciones_por_clima",
+        "patterns": [
+            "¿Cómo hacer compost en clima húmedo?",
+            "Recomendaciones de compostaje para zonas frías",
+            "¿Qué pasa si llueve sobre el compost?"
+        ],
+        "responses": [
+            "En climas húmedos, protege el compost con un techo o lona. En zonas frías, el proceso es más lento, por lo que conviene usar materiales ricos en nitrógeno y asegurar una buena aireación."
+        ]
+    },
+    {
+        "tag": "tipos_de_materiales",
+        "patterns": [
+            "¿Qué residuos del café puedo compostar?",
+            "¿El mucílago sirve para compost?",
+            "¿Puedo usar cáscara de café en el compost?"
+        ],
+        "responses": [
+            "Sí. Puedes compostar la pulpa de café, el mucílago y las cáscaras. Son ricos en nitrógeno, por lo que deben equilibrarse con materiales secos (hojas, ramas, aserrín) para evitar exceso de humedad."
+        ]
+    },
+    {
+        "tag": "tiempo_de_maduracion",
+        "patterns": [
+            "¿Cuánto tarda el compost en madurar?",
+            "¿Cómo sé si el compost ya está listo?",
+            "Tiempo de descomposición del compost"
+        ],
+        "responses": [
+            "El compost está maduro en 3-6 meses, dependiendo de las condiciones. Cuando huele a tierra, tiene color oscuro, textura suelta y no se distinguen los residuos originales, ya está listo."
+        ]
+    },
+    {
+        "tag": "aplicacion_en_cafetales",
+        "patterns": [
+            "¿Cómo aplicar compost al cafeto?",
+            "¿Dónde se coloca el compost en el cultivo de café?",
+            "Forma correcta de usar compost en la finca"
+        ],
+        "responses": [
+            "Aplique el compost en forma de anillo alrededor del cafeto, dejando 10 cm de espacio desde el tallo. Cubra ligeramente con tierra para mantener la humedad y evite aplicar en épocas de alta lluvia."
+        ]
+    },
+    {
+        "tag": "herramientas_para_compostar",
+        "patterns": [
+            "¿Qué herramientas necesito para compostar?",
+            "Equipo para hacer compostaje",
+            "Utensilios útiles para compost"
+        ],
+        "responses": [
+            "Para compostar en finca puedes usar: pala, rastrillo, carretilla, termómetro de compost, lona plástica, y tamiz. Opcionalmente, puedes usar una trituradora de residuos para acelerar el proceso."
+        ]
+    },
+    {
+        "tag": "almacenamiento_y_manejo",
+        "patterns": [
+            "¿Cómo almacenar compost terminado?",
+            "¿Dónde guardo el compost?",
+            "¿El compost se puede empacar?"
+        ],
+        "responses": [
+            "El compost maduro puede almacenarse en sacos de yute o plásticos perforados en un lugar seco y fresco. No debe humedecerse ni exponerse al sol directamente. Usarlo antes de 6 meses es ideal."
+        ]
+    },
+    {
+        "tag": "automatizacion_y_monitoreo",
+        "patterns": [
+            "¿Cómo puedo automatizar el compostaje?",
+            "Monitoreo inteligente de compost",
+            "Tecnología para el manejo del compost"
+        ],
+        "responses": [
+            "Puedes usar sensores de temperatura y humedad conectados a una aplicación móvil. También hay composteras automáticas que controlan el oxígeno y voltean el material. Esto ayuda a mantener condiciones óptimas."
+        ]
+    }
+    ]
+}
