@@ -75,3 +75,4 @@ pickle.dump(words, open('words.pkl', 'wb'))
 pickle.dump(classes, open('classes.pkl', 'wb'))
 
 print("Modelo entrenado y archivos guardados.")
+
