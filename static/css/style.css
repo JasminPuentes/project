@@ -23,12 +23,15 @@ body {
 p {
     font-size: 20px;
     color: white;
-    text-shadow: 1px 1px 3px #000;
+    text-shadow: 1px 1px 3px #000; 
+    line-height: 1.2;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 h1, h2, h3, h4, h5, h6 {
     color: white;
     text-shadow: 1px 1px 3px #000;
-    font-size: 18px; /* o 1rem */
+    font-size: 24px; /* o 1rem */
 }
 
 button {
@@ -89,6 +92,6 @@ html, body {
 }
 @media screen and (max-width: 600px) {
     p, h1, h2, h3, h4 {
-    font-size: 18px;
+    font-size: 24px;
     }
 }
