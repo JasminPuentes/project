@@ -5,9 +5,9 @@ import nltk
 import pickle
 
 from nltk.stem import WordNetLemmatizer
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout
-from tensorflow.keras.optimizers import SGD
+from keras.models import Sequential
+from keras.layers import Dense, Dropout
+from keras.optimizers import SGD
 
 nltk.download('punkt')
 nltk.download('wordnet')

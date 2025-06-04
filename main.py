@@ -33,8 +33,11 @@ async def chatbot_page(request: Request):
 @app.post("/chat")
 async def chat_endpoint(request: Request):
     data = await request.json()
+    palabras = ["Compostaje", "Café"]
+    valida = 0
+    if palabras in data:
+        return JSONResponse(content={"respuesta": "¡Hola! ¿En qué puedo ayudarte con el compostaje o el café?"})    
     pregunta = data.get("pregunta", "").lower()
-    
     respuesta = responder_usuario(pregunta)
     return JSONResponse(content={"respuesta": respuesta})
 
@@ -54,9 +57,12 @@ import numpy as np
 import random
 import nltk
 from nltk.stem import WordNetLemmatizer
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout
-from tensorflow.keras.optimizers import SGD
+import tensorflow as tf
+import keras as keras
+from keras.models import Sequential
+from keras.layers import Dense, Dropout
+from keras.optimizers import SGD
+nltk.download('punkt_tab')
 
 
 # Verifica que los recursos de NLTK estén disponibles. Si no lo están, los descarga automáticamente.
@@ -127,10 +133,10 @@ model.add(Dense(len(train_y[0]), activation='softmax'))
 
 # Compilar modelo con optimizador SGD
 sgd = SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy']) # type: ignore
 
 #Cargar modelo entrenado 
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 import pickle
 
 # Cargar modelo previamente entrenado y serializado
@@ -167,7 +173,7 @@ def bag_of_words(sentence, words):
 def responder_usuario(mensaje):
     mensaje = limpiar_texto(mensaje)
     bow = bag_of_words(mensaje, words)
-    resultado = model.predict(np.array([bow]))[0]
+    resultado = model.predict(np.array([bow]))[0] # type: ignore
     umbral = 0.7  # umbral de confianza
     # Filtrar respuestas con confianza suficiente
     resultados = [[i, r] for i, r in enumerate(resultado) if r > umbral]
