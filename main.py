@@ -35,8 +35,11 @@ async def chat_endpoint(request: Request):
     data = await request.json()
     palabras = ["Compostaje", "Café"]
     valida = 0
-    if palabras in data:
-        return JSONResponse(content={"respuesta": "¡Hola! ¿En qué puedo ayudarte con el compostaje o el café?"})    
+    '''if palabras in data:
+        pregunta = data.get("pregunta", "").lower()
+        respuesta = responder_usuario(pregunta)
+        return JSONResponse(content={"respuesta": "¡Hola! ¿En qué puedo ayudarte con el compostaje o el café?"})  
+    else:'''
     pregunta = data.get("pregunta", "").lower()
     respuesta = responder_usuario(pregunta)
     return JSONResponse(content={"respuesta": respuesta})
