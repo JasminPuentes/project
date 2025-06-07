@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <title>Información sobre Compostaje</title>
     <link rel="icon" href="{{ url_for('static', path='images/favicon.ico') }}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     <style>
       body {
-          font-family: 'zilla slab, serif;
-          background-color: #e9f5e1;
+          font-family: zilla slab, serif;
+          background-color: #CFEEBBFF;
           color: #2e2e2e;
           text-align: center;
           padding: 30px;
@@ -18,8 +20,7 @@
           box-shadow: 0 4px 8px rgba(0,0,0,0.2);
           margin-bottom: 20px;
       }
-      h1; h2; h3; h4 {
-          font-size: 20px;
+      h2{
           color: #3e6b26;
       }
       p {
@@ -40,9 +41,12 @@
       .btn:hover {
           background-color: #4f8c30;
       }
+      li{
+        text-align: left;
+      }
     </style>
   </head>
-  <body>
+  <body class="body">
     <b><h1>¿Qué es el Compostaje?</h1></b>
     <img src="/static/images/compostaje.png" alt="Compostaje" />
 
@@ -51,34 +55,110 @@
       descomponen residuos orgánicos (como restos de comida, hojas, estiércol,
       etc.) para convertirlos en compost, un abono natural rico en nutrientes.
     </p>
+    <div class="container overflow-hidden text-center">
+      <div class="row gy-5">
+        <div class="col-6">
+          <div class="p-3">
+            <div class="accordion" id="accordionporquecompostaje">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <h2>¿Para qué cultivos sirve el compost?</h2>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>El compost es útil para todos los tipos de cultivos, ya que:</p>
+                  <ul>
+                    <li>Aporta nutrientes esenciales (nitrógeno, fósforo, potasio, calcio,magnesio).</li>
+                    <li>Mejora la estructura del suelo, aumentando la retención de agua y aireación.</li>
+                    <li>Estimula la actividad biológica del suelo, favoreciendo la salud de las plantas.</li>
+                    <li>Reduce la erosión y mejora la capacidad de retención de humedad.</li> 
+                    <li> Activa la vida microbiana, fundamental para una agricultura sana.</li>
+                  </ul>
+                    <p>En resumen, el compostaje es un aliado clave para mejorar la fertilidad del suelo y promover cultivos saludables y sostenibles.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="p-3">
+            <div class="accordion" id="accordionbeneficios">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <h2>Cultivos que se benefician:</h2>
+                  </button>
+                </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="col-12">
+                  <ul>
+                    <li>Hortalizas: tomates, lechugas, zanahorias, etc.</li>
+                    <li>Frutales: manzanos, perales, cafe, cacao cítricos.</li>
+                    <li>Cereales y granos: maíz, trigo, arroz, frijol, lenteja..</li>
+                    <li>Tubérculos y raíces: papa, yuca, remolacha, jengibre.</li>
+                    <li>Aromáticas y medicinales: albahaca, menta, orégano, romero.</li>
+                    <li>Plantas ornamentales: Rosas, geranios, margaritas, flores y arbustos.</li>
+                    <li>Leguminosas: frijoles, lentejas, garbanzos.</li>
+                  <ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container px-4 text-center">
+      <div class="row gx-5">
+        <div class="col">
+          <div class="p-3">
+            <div class="accordion" id="accordionproblemas">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTree" aria-expanded="true" aria-controls="collapseTree">
+                    <h2>Problemáticas comunes al usar compost en la agricultura:</h2>
+                  </button>
+                </h2>
+                <div id="collapseTree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Mala elección del tipo de compost.</li>
+                      <li>Aplicación de compost inmaduro.</li>
+                      <li>Exceso de compost o mal dosificado.</li>
+                      <li>Contaminación del compost.</li>
+                      <li>Aplicación en el momento inadecuado.</li>
+                      <li>Falta de incorporación adecuada al suelo.</li>
+                      <li>Desbalance de nutrientes.</li>
+                      <li>Uso de compost sin diagnóstico del suelo.</li>
+                      <li>Falta de conocimiento sobre el proceso de compostaje.</li>
+                      <li>Inadecuada conservación del compost.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
 
-    <b><h1>Problemáticas comunes al usar compost en la agricultura:</h1></b>
-    <p>- Mala elección del tipo de compost.</p>
-    <p>- Aplicación de compost inmaduro.</p>
-    <p>- Exceso de compost o mal dosificado.</p>
-    <p>- Contaminación del compost.</p>
-    <p>- Aplicación en el momento inadecuado.</p>
-    <p>- Falta de incorporación adecuada al suelo.</p>
-    <p>- Uso de compost sin diagnóstico del suelo.</p>
 
-    <b><h1>¿Para qué cultivos sirve el compost?</h1></b>
-    <p>El compost es útil para todos los tipos de cultivos, ya que:</p>
-    <p>
-      - Aporta nutrientes esenciales (nitrógeno, fósforo, potasio, calcio,
-      magnesio).
-    </p>
-    <p>
-      - Mejora la estructura del suelo, aumentando la retención de agua y
-      aireación.
-    </p>
-    <p>- Activa la vida microbiana, fundamental para una agricultura sana.</p>
-    <b><h1>Cultivos que se benefician especialmente:</h1></b>
-    <p>- Hortalizas: Lechuga, tomate, espinaca, cebolla, zanahoria, col.</p>
-    <p>- Frutales: Naranja, mango, aguacate, manzana, café, cacao.</p>
-    <p>- Cereales y granos: Maíz, arroz, trigo, frijol, lenteja.</p>
-    <p>- Tubérculos y raíces: Papa, yuca, remolacha, jengibre.</p>
-    <p>- Ornamentales: Rosas, geranios, margaritas.</p>
-    <p>- Aromáticas y medicinales: Albahaca, menta, orégano, romero.</p>
+
+
+
+
+
+
+
+    <b><h1></h1></b>
+    
+
 
     <p>
       <a href="/menu">Volver al menú</a>
