@@ -5,6 +5,20 @@
     <title>Chatbot Compost Café</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="icon" href="{{ url_for('static', path='images/favicon.ico') }}" type="image/x-icon">
+    <style>
+      /* Para que el scroll funcione bien */
+        #chatbox {
+        scrollbar-width: thin;
+        scrollbar-color: #4CAF50 transparent;
+        }
+        #chatbox::-webkit-scrollbar {
+        width: 8px;
+        }
+        #chatbox::-webkit-scrollbar-thumb {
+        background-color: #4CAF50;
+        border-radius: 10px;
+        }
+    </style>
 </head>
 <body style="background-image: url('/static/images/el-cafe-adulto-cosechando.jpg'); background-size: cover; color: white; text-align: center; padding-top: 100px;">
 
@@ -21,7 +35,7 @@
         overflow-y: auto;
         height: 300px;
     ">
-        <!-- Aquí agregaremos los mensajes -->
+        <!-- Aquí se mostrarán los mensajes -->
     </div>
 
     <div style="margin-top: 20px;">
@@ -43,29 +57,56 @@
         ">Enviar</button>
     </div>
 
+    <h2 style="margin-top: 50px;"><b>Preguntas frecuentes</b></h2>
+    <ul style="list-style-type:none; padding-left: 0;">
+        <li><button onclick="enviarPregunta('¿Qué es el compostaje?')" style="margin: 5px;">¿Qué es el compostaje?</button></li>
+        <li><button onclick="enviarPregunta('¿Cómo saber si la temperatura es ideal para sembrar?')" style="margin: 5px;">¿Cómo saber si la temperatura es ideal para sembrar?</button></li>
+        <li><button onclick="enviarPregunta('Consejos para usar fertilizante o compost')" style="margin: 5px;">Consejos para usar fertilizante o compost</button></li>
+        <li><button onclick="enviarPregunta('¿Cuáles son los errores comunes al usar compostaje?')" style="margin: 5px;">¿Cuáles son los errores comunes al usar compostaje?</button></li>
+    </ul>
+
     <script>
-        async function enviarPregunta() {
-            const pregunta = document.getElementById('pregunta').value;
+        // Función para mostrar mensajes en el chatbox
+        function mostrarMensaje(texto, clase) {
             const chatbox = document.getElementById('chatbox');
+            const mensaje = document.createElement('p');
+            mensaje.textContent = texto;
+            mensaje.className = clase; // "usuario" o "bot"
+            mensaje.style.margin = '10px 0';
+            chatbox.appendChild(mensaje);
+            chatbox.scrollTop = chatbox.scrollHeight; // Scroll al final
+        }
 
-            if (!pregunta.trim()) return;
+        // Función para enviar pregunta al backend
+        async function enviarPregunta(pregunta = null) {
+            // Si no se pasa pregunta, tomar la del input
+            if (!pregunta) {
+                pregunta = document.getElementById('pregunta').value;
+                if (!pregunta.trim()) return; // no enviar si está vacío
+            }
 
-            chatbox.innerHTML += `<p><strong>Tú:</strong> ${pregunta}</p>`;
+            // Mostrar la pregunta del usuario en pantalla
+            mostrarMensaje("Tú: " + pregunta, "usuario");
 
-            const respuesta = await fetch('/chat', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ pregunta: pregunta })
-            });
+            // Limpiar input
+            document.getElementById('pregunta').value = "";
 
-            const data = await respuesta.json();
+            // Enviar petición POST al endpoint /chat
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ pregunta: pregunta })
+                });
+                const data = await response.json();
 
-            chatbox.innerHTML += `<p><strong>Asistente:</strong> ${data.respuesta}</p>`;
-            document.getElementById('pregunta').value = '';
-            chatbox.scrollTop = chatbox.scrollHeight;
+                // Mostrar la respuesta del bot
+                mostrarMensaje("Bot: " + data.respuesta, "bot");
+            } catch (error) {
+                mostrarMensaje("Error en la comunicación con el servidor.", "bot");
+                console.error(error);
+            }
         }
     </script>
-<body class="/static/images/menu2.png">
+</body>
 </html>

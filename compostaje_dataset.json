@@ -15,6 +15,7 @@
     {
         "tag": "beneficios_para_el_cafe",
         "patterns": [
+            "que beneficios tiene el compost para el café",
             "¿El compost ayuda a mejorar la producción de café?",
             "Beneficios del compost en cafetales",
             "¿Por qué aplicar compost al café?"
@@ -26,7 +27,7 @@
     {
         "tag": "condiciones_para_compostar",
         "patterns": [
-            "¿Qué condiciones necesita el compost para formarse?",
+            "¿Qué condiciones necesita el compost?",
             "¿Cuánta humedad debe tener el compost?",
             "¿Temperatura ideal para compostaje?"
         ],
@@ -116,11 +117,56 @@
         "patterns": [
             "¿Cómo puedo automatizar el compostaje?",
             "Monitoreo inteligente de compost",
-            "Tecnología para el manejo del compost"
+            "puedes usar sensores"
         ],
         "responses": [
             "Puedes usar sensores de temperatura y humedad conectados a una aplicación móvil. También hay composteras automáticas que controlan el oxígeno y voltean el material. Esto ayuda a mantener condiciones óptimas."
         ]
+    },
+    {
+        "tag": "guia_siembra_cafe",
+        "patterns": ["¿Puedes darme guía básica para sembrar café?", "¿Cómo se siembra café?", "Guía para cultivar café"],
+        "responses": [
+        "Temperatura ideal: 18°C a 24°C.\nSuelo: Tierra negra, ligero, profundo, buen drenaje, rico en materia orgánica. pH entre 5.5 y 6.5.\nZona de cultivo: Inclinada para buen drenaje. Eliminar malezas y residuos.\nSubsuelo: Hoyos de 40x40x40 cm, airear tierra unos días.\nEnmiendas: Compost, estiércol o cal si el pH es bajo.\nSemillas: Usar almácigos hasta 15–20 cm de altura.\nDistancia: 1.5–2.0 m entre plantas y 2.0–2.5 m entre surcos.\nÉpoca: Inicio de temporada de lluvias.\nSombra: Plantar árboles de sombra.\nRiego: 2–3 veces por semana si no llueve.\nAbonado: Cada 2 meses según análisis del suelo.\nVigilancia: Roya, broca y minadores."
+        ]
+    },
+    {
+        "tag": "estimacion_temperatura",
+        "patterns": ["¿Cómo estimar la temperatura sin equipos?", "¿Cómo saber si la temperatura es ideal para sembrar?"],
+        "responses": [
+        "Ambiente: Si hay rocío y clima fresco: 16°C–22°C. Si trabajas sin sudar mucho: 18°C–25°C. Si sudas con poca actividad: >26°C.\nSuelo: Mete el dedo 10 cm en el suelo. Si se siente tibio, está entre 18°C y 24°C. Si está muy frío o caliente, no es buen momento."
+        ]
+    },
+    {
+        "tag": "estimacion_ph",
+        "patterns": ["¿Cómo estimar el pH del suelo sin medidor?", "¿Cómo saber si el suelo es ácido o alcalino?"],
+        "responses": [
+        "Con vinagre: Si burbujea, el suelo es alcalino (pH > 7).\nCon bicarbonato: Si burbujea, el suelo es ácido (pH < 6).\nSi no hay reacción: Suelo neutro (pH entre 6 y 7), ideal para el café.\nObservación: Musgos y helechos = suelo ácido; piedras blancas o cal = suelo alcalino."
+        ]
+    },
+    {
+        "tag": "consejos_fertilizantes",
+        "patterns": ["¿Qué recomendaciones hay para aplicar fertilizantes?", "Consejos para usar fertilizante o compost"],
+        "responses": [
+        "Aplicar después de lluvia ligera o antes de lluvia prevista.\nCubrir el compost con tierra o acolchado.\nNo usar estiércol fresco, solo compostado al menos 3 meses.\nCombinar diferentes tipos de fertilizantes para mejores resultados."
+        ]
+    },
+    {
+        "tag": "tipos_compostaje",
+        "patterns": ["¿Qué tipos de compostaje existen?", "¿Qué métodos de compostaje hay?"],
+        "responses": [
+        "1. Tradicional: Capas de material seco y húmedo. Tiempo: 3–6 meses.\n2. Lombricultura: Lombrices rojas. Tiempo: 1–3 meses.\n3. Bokashi: Fermentación anaeróbica. Tiempo: 15–30 días.\n4. Superficie: Restos vegetales sobre el suelo. Lenta descomposición.\n5. Compostera cerrada: Acelerado con ventilación. Tiempo: 1–3 meses."
+        ]
+    },
+    {
+        "tag": "errores_compostaje",
+        "patterns": ["¿Cuáles son los errores comunes al usar compostaje?", "Causas de mal uso del compost", "mal uso", "errores"],
+        "responses": [
+        "1. Mala elección del compost: Estrés en plantas, baja absorción.\n2. Compost inmaduro: Quema de raíces, malos olores.\n3. Exceso de compost: Nitrógeno alto, desequilibrio de pH.\n4. Compost contaminado: Daños en la microbiota y toxicidad.\n5. Aplicación en mal momento: Pérdida de nutrientes.\n6. Mala aplicación: Exposición al sol, menos absorción.\n7. Sin análisis del suelo: Desequilibrio y pérdida de eficacia."
+        ]
     }
     ]
 }
+
+
+
